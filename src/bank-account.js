@@ -45,7 +45,14 @@ export class BankAccount {
   withdraw(monto) {
     if(this.abierto==true)
     {
-      this.total -= monto;
+      if(this.total>=monto)
+      {
+        this.total -= monto;
+      }
+      else
+      {
+        throw new ValueError();
+      }      
     }
     else{
       throw new ValueError();
