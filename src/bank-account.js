@@ -17,7 +17,7 @@ export class BankAccount {
   }
 
   deposit(monto) {
-    this.total += 100;
+    this.total += monto;
   }
 
   withdraw() {
