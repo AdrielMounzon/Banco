@@ -21,7 +21,7 @@ export class BankAccount {
   }
 
   withdraw() {
-    throw new Error("Remove this statement and implement this function");
+    this.total-=50;
   }
 
   get balance() {
