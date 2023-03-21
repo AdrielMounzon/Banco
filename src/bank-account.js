@@ -18,7 +18,13 @@ export class BankAccount {
   }
 
   deposit(monto) {
-    this.total += monto;
+    if(this.abierto==true)
+    {
+      this.total += monto;
+    }
+    else{
+      throw new ValueError();
+    }
   }
 
   withdraw(monto) {
