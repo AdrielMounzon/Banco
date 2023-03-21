@@ -24,6 +24,7 @@ export class BankAccount {
     if(this.abierto==true)
     {
       this.abierto=false;
+      this.total=0;
     }
     else
     {
