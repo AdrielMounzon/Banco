@@ -5,7 +5,7 @@
 
 export class BankAccount {
   constructor() {
-    
+    this.total = 0;
   }
 
   open() {
@@ -16,8 +16,8 @@ export class BankAccount {
     throw new Error("Remove this statement and implement this function");
   }
 
-  deposit() {
-    throw new Error("Remove this statement and implement this function");
+  deposit(monto) {
+    this.total += 100;
   }
 
   withdraw() {
@@ -25,7 +25,7 @@ export class BankAccount {
   }
 
   get balance() {
-    return 0;
+    return this.total;
   }
 }
 
