@@ -6,7 +6,7 @@
 export class BankAccount {
   constructor() {
     this.total = 0;
-    this.abierto;
+    this.abierto = false;
   }
 
   open() {
@@ -14,7 +14,14 @@ export class BankAccount {
   }
 
   close() {
-    this.abierto=false;
+    if(this.abierto==true)
+    {
+      this.abierto=false;
+    }
+    else
+    {
+      throw new ValueError();
+    }
   }
 
   deposit(monto) {
