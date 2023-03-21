@@ -33,6 +33,10 @@ export class BankAccount {
   }
 
   deposit(monto) {
+    if(monto<0)
+    {
+      throw new ValueError();
+    }
     if(this.abierto==true)
     {
       this.total += monto;
